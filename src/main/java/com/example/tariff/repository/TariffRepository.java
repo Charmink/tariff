@@ -1,5 +1,6 @@
 package com.example.tariff.repository;
 
+
 import com.example.tariff.entity.Tariff;
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class TariffController {
@@ -22,6 +24,13 @@ public class TariffController {
     @GetMapping(value = "api/tariff/{deviceId}")
     public Tariff getTariff(@PathVariable Long deviceId){
         return tariffService.getTariff(deviceId);
+
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(value = "api/tariff")
+    public List<Tariff> getAllTariff(){
+        return tariffService.getAllTariff();
 
     }
 }

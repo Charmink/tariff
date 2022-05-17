@@ -1,7 +1,8 @@
 package com.example.tariff.entity;
 
+
+
 import lombok.Data;
-import lombok.Generated;
 
 import javax.persistence.*;
 
@@ -10,7 +11,6 @@ import javax.persistence.*;
 @Table(name = "tariff", schema = "public")
 public class Tariff {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "device_id")
     private Long id;
 
